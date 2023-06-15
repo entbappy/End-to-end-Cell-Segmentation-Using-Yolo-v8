@@ -6,6 +6,8 @@ from flask_cors import CORS, cross_origin
 from cellSegmentation.constant.application import APP_HOST, APP_PORT
 
 
+
+
 app = Flask(__name__)
 CORS(app)
 
@@ -25,6 +27,7 @@ def trainRoute():
 @app.route("/")
 def home():
     return render_template("index.html")
+
 
 
 
@@ -54,8 +57,12 @@ def predictRoute():
 
 
 
-
 if __name__ == "__main__":
     clApp = ClientApp()
     app.run(host=APP_HOST, port=APP_PORT)
+
+
+
+
+
 
